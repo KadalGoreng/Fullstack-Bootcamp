@@ -5,6 +5,6 @@
             DISPLAY (N - 32) * (5/9)
         ELSE IF type == "kelvin" THEN
             DISPLAY (N - 273.15)
-        ELSE IF type == "fahrenheit" THEN
+        ELSE IF type == "celcius" THEN
             DISPLAY temp
         END
