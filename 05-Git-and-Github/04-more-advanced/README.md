@@ -1,0 +1,8 @@
+1. What is the difference between `git reset` and `git revert`. When would you use one over the other? <br>
+   `git reset` will reset the state of the branch to a previous state by dropping all the changes post the desired commit while `git revert` will reset to a previous state by creating new reverting commits and keep the original commits .It's recommended to use `git revert` instead of `git reset` in enterprise environment.
+2. What is the difference between `git merge` and `git rebase`. When would you use one over the other?<br>
+   If you would prefer a clean, linear history free of unnecessary merge commits, you should reach for `git rebase` instead of `git merge` when integrating changes from another branch. On the other hand, if you want to preserve the complete history of your project and avoid the risk of re-writing public commits, you can stick with `git merge`.
+3. What is the difference between `git stash` pop and `git stash apply`. When would you use one over the other?<br>
+   `git stash` pop throws away the (topmost, by default) stash after applying it, whereas `git stash apply` leaves it in the stash list for possible later reuse (or you can then `git stash` drop it).
+4. What kinds of things can you do in `interactive` mode when rebasing? <br>
+   `Interactive` rebasing gives you the opportunity to alter commits as they are moved to the new branch. This is even more powerful than an automated rebase, since it offers complete control over the branch�s commit history. Typically, this is used to clean up a messy history before merging a feature branch into main.
