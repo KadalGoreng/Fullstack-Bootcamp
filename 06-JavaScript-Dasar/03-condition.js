@@ -38,6 +38,9 @@ switch (unit) {
     break;
   case "C":
     hasil = temperature;
+    break;
+  default:
+    hasil = "Maaf anda salah input";
 }
 
-console.log(`${hasil} ${unit}`);
+console.log(`${hasil}`);
