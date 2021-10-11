@@ -1,0 +1,3 @@
+1. Local storage merupakan tempat di browser yang bisa digunakan untuk menyimpan data dan data tidak akan hilang walaupun browser di close dan komputer di restart.
+2. Session storage merupakan penyimpanan data yang hanya bertahan ketika browser tidak ditutup atau tab tidak ditutup, Apabila browser ditutup maka secara otomatis data yang disimpan di session storage akan hilang.
+3. Cookie ini adalah suatu penyimpanan yang dilakukan javascript kepada browser biasanya untuk menyimpan passowrd dan username. Data yang menggunakan cookie ini lebih dapat tersimpan dengan aman.
