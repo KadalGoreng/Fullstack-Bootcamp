@@ -22,45 +22,46 @@ console.log(person.favDrinks);
 console.log(person.greeting("John Watson"));
 
 // * Soal 2
-// function getObjectValue(obj, path) {
-//   for (const key in obj) {
-// console.log(key);
-//     if (key == "ingredients") {
-//       for (const key2 in key) {
-//         // const element = key[key2];
-//         console.log(key[key2]);
-//       }
-// console.log(obj[path]);
-// const element = obj[path];
-//     }
-//   }
-// }
+function getObjectValue(obj, path) {
+  path = path.split(".");
+  let key = obj;
 
-// const milkBasedCoffee = {
-//   name: "latte",
-//   ingredients: {
-//     espresso: {
-//       origin: "lampung",
-//       roastProfile: "medium to dark",
-//       ratio: 1,
-//     },
-//     milk: {
-//       brand: "susu murni",
-//       isVegan: false,
-//       ratio: 5,
-//     },
-//   },
-// };
+  for (let i = 0; i < path.length; i++) {
+    const curr = key[path[i]];
+    key = curr;
+  }
+  if (key === undefined) {
+    return null;
+  }
 
-// const espresso = getObjectValue(milkBasedCoffee, "ingredients.espresso.origin");
-// const coffeeBrand = getObjectValue(milkBasedCoffee, "ingredients.espresso.brand");
-// const isMilkVegan = getObjectValue(milkBasedCoffee, "ingredients.milk.isVegan");
+  return key;
+}
 
-// console.log(espresso);
-// console.log(coffeeBrand);
-// console.log(isMilkVegan);
+const milkBasedCoffee = {
+  name: "latte",
+  ingredients: {
+    espresso: {
+      origin: "lampung",
+      roastProfile: "medium to dark",
+      ratio: 1,
+    },
+    milk: {
+      brand: "susu murni",
+      isVegan: false,
+      ratio: 5,
+    },
+  },
+};
 
-// getObjectValue(milkBasedCoffee, "ingredients.espresso.origin");
+const espresso = getObjectValue(milkBasedCoffee, "ingredients.espresso.origin");
+const coffeeBrand = getObjectValue(milkBasedCoffee, "ingredients.espresso.brand");
+const isMilkVegan = getObjectValue(milkBasedCoffee, "ingredients.milk.isVegan");
+
+console.log(espresso);
+console.log(coffeeBrand);
+console.log(isMilkVegan);
+
+getObjectValue(milkBasedCoffee, "ingredients.espresso.origin");
 
 // * Soal 3
 const items = [
