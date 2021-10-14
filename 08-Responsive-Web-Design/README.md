@@ -1,3 +1,4 @@
+# Soal nomor 1
 1. Apa itu responsive web design? 
     - membuat web kita agar dapat di akses di berbagai 
 device dengan ukuran yang pas
