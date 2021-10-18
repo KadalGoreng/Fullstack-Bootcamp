@@ -1,0 +1,8 @@
+1. Apa itu CSS Framework?
+Kerangka kerja CSS adalah pustaka yang memungkinkan desain web yang lebih mudah.
+2. Apakah bootstrap satu-satunya CSS Framework yang dapat kita gunakan?
+Tidak, kita menggunakan tailwind juga
+3. Sebutkan beberapa CSS Framework selain Bootstrap?
+Tailwind, Foundation, Bulma
+4. Bagaimana tata cara penggunaan Bootstrap?
+yang pertama kita dapat copas link cdn atau juga dapat mendownload bootstrapnya, selanjutnya kita bisa memakai class2 yang ada di bootstarp dengan cara memanggilnya di html
