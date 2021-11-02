@@ -6,7 +6,9 @@ import App from "./App";
 const rootElement = document.getElementById("root");
 ReactDOM.render(
   <StrictMode>
-    <App />
+    <div style={{ display: "flex", alignItems: "center", height: "100vh" }}>
+      <App />
+    </div>
   </StrictMode>,
   rootElement
 );
