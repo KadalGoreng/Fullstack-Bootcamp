@@ -1,10 +1,12 @@
 import { useState } from "react";
-import { useLocation } from "react-router-dom";
-import qs from "qs";
+import { useLocation, useHistory } from "react-router-dom";
+
+const qs = require("query-string");
 
 const MovieListFilter = () => {
   // Variable yang akan menampung parameter yang telah diberikan oleh user
-  const { params } = useLocation();
+  const params = qs.parse(useLocation().search);
+  const history = useHistory();
 
   const shows = [10, 20, 30];
   const categories = ["TV", "Movie"];
@@ -53,7 +55,7 @@ const MovieListFilter = () => {
           </select>
         </div>
         <div className="col-2 row align-items-end">
-          <button id="submit" className="btn btn-outline-success">
+          <button id="submit" className="btn btn-outline-success" onClick={() => history.push(`/movies/?show=${show}&category=${category}&sort=${sortBy}`)}>
             submit
           </button>
         </div>
